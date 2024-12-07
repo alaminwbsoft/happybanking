@@ -27,7 +27,7 @@ const Register = () => {
   const decrementBalance = () => setBalance((prev) => (prev > 0 ? prev - 1 : 0)); // Prevent negative balance
   return (
     <>
-      <div className="flex flex-col items-center justify-center content-center mt-8 bg-gray-100 mx-3">
+      <div className="flex flex-col items-center justify-center content-center mt-2 bg-gray-100 mx-3">
         <div className="bg-white shadow-md rounded px-4 pt-2 pb-8 mb-4 max-w-sm w-full">
           <h2 className="text-center text-2xl font-bold text-orange-500">
             Registration
@@ -93,37 +93,35 @@ const Register = () => {
               </div>
             </div>
             <div className="mb-4">
-      <label
-        htmlFor="gender"
-        className="block text-gray-700 text-sm font-bold mb-2"
-      >
-        Gender <span className="text-red-500">(required)</span>
-      </label>
-      <div className="flex items-center justify-between">
-        {/* Male Button */}
-        <button
-          onClick={() => handleSelectGender("male")}
-          className={`border text-center rounded-md px-10 py-1.5 flex items-center gap-2 ${
-            selectedGender === "male"
-              ? "bg-orange-500 text-white"
-              : "border-orange-500 text-orange-500"
-          }`}
-        >
-          <IoMale /> Male
-        </button>
-        {/* Female Button */}
-        <button
-          onClick={() => handleSelectGender("female")}
-          className={`border text-center rounded-md px-8 py-1.5 flex items-center gap-2 ${
-            selectedGender === "female"
-              ? "bg-orange-500 text-white"
-              : "border-orange-500 text-orange-500"
-          }`}
-        >
-          <IoFemale /> Female
-        </button>
-      </div>
-    </div>
+              <label
+                htmlFor="gender"
+                className="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Gender <span className="text-red-500">(required)</span>
+              </label>
+              <div className="flex items-center justify-between">
+                {/* Male Button */}
+                <button
+                  onClick={() => handleSelectGender("male")}
+                  className={`border text-center rounded-md px-10 py-1.5 flex items-center gap-2 ${selectedGender === "male"
+                      ? "bg-orange-500 text-white"
+                      : "border-orange-500 text-orange-500"
+                    }`}
+                >
+                  <IoMale /> Male
+                </button>
+                {/* Female Button */}
+                <button
+                  onClick={() => handleSelectGender("female")}
+                  className={`border text-center rounded-md px-8 py-1.5 flex items-center gap-2 ${selectedGender === "female"
+                      ? "bg-orange-500 text-white"
+                      : "border-orange-500 text-orange-500"
+                    }`}
+                >
+                  <IoFemale /> Female
+                </button>
+              </div>
+            </div>
             <div className="mb-4">
               <label
                 htmlFor="profession"
