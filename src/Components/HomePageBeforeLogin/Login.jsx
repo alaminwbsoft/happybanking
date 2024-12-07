@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const Login = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-[663px] bg-gray-100 mx-3">
+      <div className="flex flex-col items-center justify-center content-center h-screen bg-gray-100 mx-3">
         <div className="bg-white shadow-md rounded px-4 pt-2 pb-8 mb-4 max-w-sm w-full">
           <h2 className="text-center text-2xl font-bold text-orange-500">
             Login
@@ -25,7 +25,7 @@ const Login = () => {
                   className="shadow appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Mobile"
                 />
-                <span className="absolute inset-y-0 left-0 flex items-center px-2  bg-gray-400">
+                <span className="absolute inset-y-0 left-0 flex items-center px-2  bg-gray-300">
                   <FaPhone />
                 </span>
               </div>
@@ -44,7 +44,7 @@ const Login = () => {
                   className="shadow appearance-none border rounded w-full py-2 pl-10 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Password"
                 />
-                <span className="absolute inset-y-0 left-0 flex items-center px-2  bg-gray-400">
+                <span className="absolute inset-y-0 left-0 flex items-center px-2  bg-gray-300">
                   <FaLock />
                 </span>
                 <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 cursor-pointer">
