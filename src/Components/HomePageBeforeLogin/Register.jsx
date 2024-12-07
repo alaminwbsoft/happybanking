@@ -1,16 +1,13 @@
-
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp, FaWallet } from "react-icons/fa";
 import { IoFemale, IoMale } from "react-icons/io5";
 import { FaLock } from "react-icons/fa6";
 
-
-
-import { FaPhone, FaEnvelope, FaUser, FaBriefcase, } from "react-icons/fa6";
+import { FaPhone, FaEnvelope, FaUser, FaBriefcase } from "react-icons/fa6";
 import { Link } from "react-router";
+import TopBar from "../../Shared/TopBar";
 
 const Register = () => {
-
   const [selectedGender, setSelectedGender] = useState(null);
   const handleSelectGender = (gender) => {
     setSelectedGender(gender);
@@ -24,9 +21,15 @@ const Register = () => {
   const [balance, setBalance] = useState(0);
 
   const incrementBalance = () => setBalance((prev) => prev + 1);
-  const decrementBalance = () => setBalance((prev) => (prev > 0 ? prev - 1 : 0)); // Prevent negative balance
+  const decrementBalance = () =>
+    setBalance((prev) => (prev > 0 ? prev - 1 : 0)); // Prevent negative balance
   return (
     <>
+      <div className="mt-1">
+        <div className="mt-1">
+          <TopBar />
+        </div>
+      </div>
       <div className="flex flex-col items-center justify-center content-center mt-2 bg-gray-100 mx-3">
         <div className="bg-white shadow-md rounded px-4 pt-2 pb-8 mb-4 max-w-sm w-full">
           <h2 className="text-center text-2xl font-bold text-orange-500">
@@ -89,7 +92,6 @@ const Register = () => {
                 <span className="absolute inset-y-0 left-0 flex items-center px-2 text-gray-500  bg-gray-200">
                   <FaEnvelope />
                 </span>
-
               </div>
             </div>
             <div className="mb-4">
@@ -103,20 +105,22 @@ const Register = () => {
                 {/* Male Button */}
                 <button
                   onClick={() => handleSelectGender("male")}
-                  className={`border text-center rounded-md px-10 py-1.5 flex items-center gap-2 ${selectedGender === "male"
+                  className={`border text-center rounded-md px-10 py-1.5 flex items-center gap-2 ${
+                    selectedGender === "male"
                       ? "bg-orange-500 text-white"
                       : "border-orange-500 text-orange-500"
-                    }`}
+                  }`}
                 >
                   <IoMale /> Male
                 </button>
                 {/* Female Button */}
                 <button
                   onClick={() => handleSelectGender("female")}
-                  className={`border text-center rounded-md px-8 py-1.5 flex items-center gap-2 ${selectedGender === "female"
+                  className={`border text-center rounded-md px-8 py-1.5 flex items-center gap-2 ${
+                    selectedGender === "female"
                       ? "bg-orange-500 text-white"
                       : "border-orange-500 text-orange-500"
-                    }`}
+                  }`}
                 >
                   <IoFemale /> Female
                 </button>
@@ -237,7 +241,6 @@ const Register = () => {
                 <span className="absolute inset-y-0 left-0 flex items-center px-2 text-gray-500  bg-gray-200">
                   <FaLock />
                 </span>
-
               </div>
             </div>
             <div className="flex items-center justify-between mb-4">

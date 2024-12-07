@@ -1,6 +1,6 @@
 import logo from "../assets/home/logo.png";
 
-const Header = () => {
+const TopBar = () => {
   return (
     <>
       <div>
@@ -10,4 +10,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default TopBar;

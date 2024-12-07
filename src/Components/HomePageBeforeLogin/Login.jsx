@@ -1,10 +1,13 @@
-import React from "react";
 import { FaPhone, FaLock } from "react-icons/fa6";
 import { Link } from "react-router";
+import TopBar from "../../Shared/TopBar";
 
 const Login = () => {
   return (
     <>
+      <div className="mt-1">
+        <TopBar />
+      </div>
       <div className="flex flex-col items-center justify-center content-center mt-64 md:mt-36 bg-gray-100 mx-3">
         <div className="bg-white shadow-md rounded px-4 pt-2 pb-8 mb-4 max-w-sm w-full">
           <h2 className="text-center text-2xl font-bold text-orange-500">
@@ -15,9 +18,7 @@ const Login = () => {
               <label
                 htmlFor="mobile"
                 className="block text-gray-700 text-sm font-bold mb-2"
-              >
-               
-              </label>
+              ></label>
               <div className="relative">
                 <input
                   type="text"
@@ -25,7 +26,7 @@ const Login = () => {
                   className="shadow appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Mobile"
                 />
-                <span className="absolute inset-y-0 left-0 flex items-center px-2  bg-gray-300">
+                <span className="absolute inset-y-0 left-0 flex items-center px-2 text-gray-500  bg-gray-200">
                   <FaPhone />
                 </span>
               </div>
@@ -34,9 +35,7 @@ const Login = () => {
               <label
                 htmlFor="password"
                 className="block text-gray-700 text-sm font-bold mb-2"
-              >
-            
-              </label>
+              ></label>
               <div className="relative">
                 <input
                   type="password"
@@ -44,7 +43,7 @@ const Login = () => {
                   className="shadow appearance-none border rounded w-full py-2 pl-10 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Password"
                 />
-                <span className="absolute inset-y-0 left-0 flex items-center px-2  bg-gray-300">
+                <span className="absolute inset-y-0 left-0 flex items-center px-2 text-gray-500  bg-gray-200">
                   <FaLock />
                 </span>
                 <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 cursor-pointer">
