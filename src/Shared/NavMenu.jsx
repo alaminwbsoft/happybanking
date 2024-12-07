@@ -19,7 +19,7 @@ const navItems = [
 
 const NavMenu = () => {
   return (
-    <nav>
+    <nav className="bg-slate-200 py-1">
       <ul className="flex justify-around mx-3">
         {navItems.map((item, index) => (
           <li key={index}>

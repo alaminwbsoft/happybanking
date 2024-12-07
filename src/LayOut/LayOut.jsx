@@ -6,7 +6,7 @@ import Footer from "../Shared/Footer";
 const LayOut = () => {
   return (
     <>
-      <div className="bg-body_bg  border-[6px] border-gray-950 rounded-2xl mx-auto mt-6">
+      <div className="bg-body_bg border-0 md:border-[6px] md: border-gray-950 md:rounded-2xl mx-auto mt-6">
         <Header />
         <Outlet />
         <Footer />

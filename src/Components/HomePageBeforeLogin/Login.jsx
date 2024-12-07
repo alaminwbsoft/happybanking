@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const Login = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 mx-3">
+      <div className="flex flex-col items-center justify-center h-[663px] bg-gray-100 mx-3">
         <div className="bg-white shadow-md rounded px-4 pt-2 pb-8 mb-4 max-w-sm w-full">
           <h2 className="text-center text-2xl font-bold text-orange-500">
             Login
@@ -16,7 +16,7 @@ const Login = () => {
                 htmlFor="mobile"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
-                Mobile
+               
               </label>
               <div className="relative">
                 <input
@@ -35,7 +35,7 @@ const Login = () => {
                 htmlFor="password"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
-                Password
+            
               </label>
               <div className="relative">
                 <input
