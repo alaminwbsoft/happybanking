@@ -3,7 +3,7 @@ import { FaBuildingColumns, FaHouse, FaUserLarge } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
 
-const Navbar = () => {
+const NavMenuAfterLogin = () => {
     return (
         <div className="flex justify-around gap-2 mt-[10px] pb-1 shadow-top-only pt-3 rounded-b-[20px]">
             <NavLink
@@ -30,4 +30,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavMenuAfterLogin;

@@ -8,18 +8,20 @@ import { Link } from "react-router";
 import TopBar from "../../Shared/TopBar";
 
 const Register = () => {
+  // gender
   const [selectedGender, setSelectedGender] = useState(null);
   const handleSelectGender = (gender) => {
+    console.log("Previous Gender:", selectedGender);
     setSelectedGender(gender);
+    console.log("Updated Gender:", gender);
   };
-
+//profession
   const [isOpen, setIsOpen] = useState(false);
-
   const handleFocus = () => setIsOpen(true);
   const handleBlur = () => setIsOpen(false);
 
+//wallet
   const [balance, setBalance] = useState(0);
-
   const incrementBalance = () => setBalance((prev) => prev + 1);
   const decrementBalance = () =>
     setBalance((prev) => (prev > 0 ? prev - 1 : 0)); // Prevent negative balance
@@ -36,9 +38,10 @@ const Register = () => {
             Registration
           </h2>
           <form>
+            {/* name */}
             <div className="mb-4">
               <label
-                htmlFor="mobile"
+                htmlFor="name"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
                 Name<span className="text-red-500">(required)</span>
@@ -46,7 +49,7 @@ const Register = () => {
               <div className="relative">
                 <input
                   type="text"
-                  id="mobile"
+                  id="name"
                   className="shadow appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Name"
                 />
@@ -55,6 +58,7 @@ const Register = () => {
                 </span>
               </div>
             </div>
+            {/* mobile */}
             <div className="mb-4">
               <label
                 htmlFor="mobile"
@@ -74,10 +78,10 @@ const Register = () => {
                 </span>
               </div>
             </div>
-
+            {/* email */}
             <div className="mb-4">
               <label
-                htmlFor="password"
+                htmlFor="email"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
                 Email<span className="text-red-500">(required)</span>
@@ -94,9 +98,11 @@ const Register = () => {
                 </span>
               </div>
             </div>
+            {/* Gender */}
             <div className="mb-4">
               <label
                 htmlFor="gender"
+                id="gender"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
                 Gender <span className="text-red-500">(required)</span>
@@ -126,6 +132,7 @@ const Register = () => {
                 </button>
               </div>
             </div>
+            {/* Profession */}
             <div className="mb-4">
               <label
                 htmlFor="profession"
@@ -163,7 +170,7 @@ const Register = () => {
                 </span>
               </div>
             </div>
-
+             {/* wallet */}
             <div className="mb-4">
               <label
                 htmlFor="wallet-balance"
@@ -202,17 +209,38 @@ const Register = () => {
                 </div>
               </div>
             </div>
+             {/* address */}
+             <div className="mb-4">
+              <label
+                htmlFor="address"
+                className="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Address<span className="text-red-500">(required)</span>
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  id="address"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="address"
+                />
+                <span className="absolute inset-y-0 left-0 flex items-center px-2 text-gray-500  bg-gray-200">
+                  <FaUser />
+                </span>
+              </div>
+            </div>
+            {/* password */}
             <div className="mb-4">
               <label
-                htmlFor="mobile"
+                htmlFor="password"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
                 Password<span className="text-red-500">(required)</span>
               </label>
               <div className="relative">
                 <input
-                  type="text"
-                  id="mobile"
+                  type="password"
+                  id="password"
                   className="shadow appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Password"
                 />
@@ -224,17 +252,18 @@ const Register = () => {
                 </span>
               </div>
             </div>
+            {/* Confirm Password */}
             <div className="mb-4">
               <label
-                htmlFor="mobile"
+                htmlFor="password"
                 className="block text-gray-700 text-sm font-bold mb-2"
               >
                 Confirm Password<span className="text-red-500">(required)</span>
               </label>
               <div className="relative">
                 <input
-                  type="text"
-                  id="mobile"
+                  type="password"
+                  id="password"
                   className="shadow appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder=" Confirm Password"
                 />
@@ -261,7 +290,7 @@ const Register = () => {
           </form>
           <p className="text-center text-sm text-gray-500 mt-4">
             Already have an account?{" "}
-            <Link to="/register" className="text-orange-500 hover:underline">
+            <Link to="/login" className="text-orange-500 hover:underline">
               login
             </Link>
           </p>

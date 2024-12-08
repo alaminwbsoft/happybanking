@@ -1,4 +1,4 @@
-import React from "react";
+
 // Assuming you're using react-router for routing
 import {
   FaHome,
@@ -17,8 +17,9 @@ const navItems = [
   { name: "Contact", icon: <FaEnvelope />, path: "/contact" },
 ];
 
-const NavMenu = () => {
+const NavMenuBeforeLogin = () => {
   return (
+    <>
     <nav className="bg-[#FFFFFF] py-2">
       <ul className="flex justify-around mx-3">
         {navItems.map((item, index) => (
@@ -34,7 +35,9 @@ const NavMenu = () => {
         ))}
       </ul>
     </nav>
+    
+    </>
   );
 };
 
-export default NavMenu;
+export default NavMenuBeforeLogin;
