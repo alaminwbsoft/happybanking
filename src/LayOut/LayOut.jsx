@@ -3,8 +3,6 @@
 // import NavMenuAfterLogin from "../Shared/NavMenuAfterLogin";
 // import NavMenuBeforeLogin from "../Shared/NavMenuBeforeLogin";
 
-
-
 // const LayOut = () => {
 //   return (
 //     <>
@@ -58,4 +56,3 @@ const LayOut = () => {
   );
 };
 export default LayOut;
-
