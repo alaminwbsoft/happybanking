@@ -34,7 +34,7 @@ const Register = () => {
       </div>
       <div className="flex flex-col items-center justify-center content-center mt-2 bg-gray-100 mx-3">
         <div className="bg-white shadow-md rounded px-4 pt-2 pb-8 mb-4 max-w-sm w-full">
-          <h2 className="text-center text-2xl font-bold text-orange-500">
+          <h2 className="text-center text-2xl font-bold text-primaryColor">
             Registration
           </h2>
           <form>
@@ -113,8 +113,8 @@ const Register = () => {
                   onClick={() => handleSelectGender("male")}
                   className={`border text-center rounded-md px-10 py-1.5 flex items-center gap-2 ${
                     selectedGender === "male"
-                      ? "bg-orange-500 text-white"
-                      : "border-orange-500 text-orange-500"
+                      ? "bg-primaryColor text-white"
+                      : "border-primaryColor text-primaryColor"
                   }`}
                 >
                   <IoMale /> Male
@@ -124,8 +124,8 @@ const Register = () => {
                   onClick={() => handleSelectGender("female")}
                   className={`border text-center rounded-md px-8 py-1.5 flex items-center gap-2 ${
                     selectedGender === "female"
-                      ? "bg-orange-500 text-white"
-                      : "border-orange-500 text-orange-500"
+                      ? "bg-primaryColor text-white"
+                      : "border-primaryColor text-primaryColor"
                   }`}
                 >
                   <IoFemale /> Female
@@ -277,20 +277,20 @@ const Register = () => {
                 <input type="checkbox" className="mr-2 leading-tight" />
                 Agree with
               </label>
-              <a href="#" className="text-sm text-orange-500 hover:underline">
+              <a href="#" className="text-sm text-primaryColor hover:underline">
                 Terms & Conditions
               </a>
             </div>
             <button
               type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="w-full bg-primaryColor hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Registration
             </button>
           </form>
           <p className="text-center text-sm text-gray-500 mt-4">
             Already have an account?{" "}
-            <Link to="/login" className="text-orange-500 hover:underline">
+            <Link to="/login" className="text-primaryColor hover:underline">
               login
             </Link>
           </p>

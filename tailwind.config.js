@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         body_bg: "#F4F8FB",
+        primaryColor:"#F7961D",
       },
     },
   },

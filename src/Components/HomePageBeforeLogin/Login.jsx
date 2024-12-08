@@ -10,7 +10,7 @@ const Login = () => {
       </div>
       <div className="flex flex-col items-center justify-center content-center mt-64 md:mt-36 bg-gray-100 mx-3">
         <div className="bg-white shadow-md rounded px-4 pt-2 pb-8 mb-4 max-w-sm w-full">
-          <h2 className="text-center text-2xl font-bold text-orange-500">
+          <h2 className="text-center text-2xl font-bold text-[#F7961D]">
             Login
           </h2>
           <form>
@@ -56,20 +56,20 @@ const Login = () => {
                 <input type="checkbox" className="mr-2 leading-tight" />
                 Remember me
               </label>
-              <a href="#" className="text-sm text-orange-500 hover:underline">
+              <a href="#" className="text-sm text-[#F7961D] hover:underline">
                 Forgot Password
               </a>
             </div>
             <button
               type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="w-full bg-[#F7961D] hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Login
             </button>
           </form>
           <p className="text-center text-sm text-gray-500 mt-4">
             Don't have an account?{" "}
-            <Link to="/register" className="text-orange-500 hover:underline">
+            <Link to="/register" className="text-[#F7961D] hover:underline">
               Register
             </Link>
           </p>

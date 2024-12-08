@@ -2,6 +2,7 @@ import { FaAddressCard, FaBookReader, FaCalculator, FaCashRegister, FaImages, Fa
 import { FaBuildingColumns, FaMoneyCheckDollar } from "react-icons/fa6";
 
 import { useNavigate } from "react-router-dom";
+import TopbarAfterLogin from "../../Shared/TopbarafterLogin";
 
 
 const HomeAfrerLogin = () => {
@@ -29,7 +30,7 @@ const HomeAfrerLogin = () => {
     }
     return (
         <div>
-         
+         <TopbarAfterLogin/>
             <div className="mx-3 ">
                 <div className="flex justify-between gap-2  p-2 mt-4 bg-white border rounded-md shadow-md">
                     <div className="flex-1 pr-3 border-r border-[#212529] space-y-2">

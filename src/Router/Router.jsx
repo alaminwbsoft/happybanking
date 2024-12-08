@@ -16,10 +16,8 @@ import PocketToBank from "../Components/PagesAfterlogin/PocketToBank";
 import HomeAfrerLogin from "../Components/PagesAfterlogin/HomeAfrerLogin";
 
 
-
-
-
 const Router = createBrowserRouter([
+  
   {
     path: "/",
     element: <LayOut />,
@@ -30,7 +28,7 @@ const Router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/",
+        path: "/home",
         element: <HomeAfrerLogin/>
       },
       {
