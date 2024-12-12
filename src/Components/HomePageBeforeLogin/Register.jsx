@@ -325,10 +325,10 @@ const Register = () => {
   const handleBlur = () => setIsOpen(false);
 
   // Wallet balance state
-  const [balance, setBalance] = useState(0);
+  const [balance, setBalance] = useState();
   const incrementBalance = () => setBalance((prev) => prev + 1);
   const decrementBalance = () =>
-    setBalance((prev) => (prev > 0 ? prev - 1 : 0)); // Prevent negative balance
+    setBalance((prev) => (prev - 1 ? prev - 1 : 0)); // Prevent negative balance
 
   // Form submission handler
   const handleRegister = async (event) => {
@@ -349,9 +349,9 @@ const Register = () => {
     };
 
     try {
-      const response = await axios.post("API_ENDPOINT/register", data);
+      const response = await axios.post("/register", data);
       alert("Registration Successful!");
-      console.log(response.data);
+      console.log(data);
       // Redirect or additional logic
     } catch (error) {
       console.error(
