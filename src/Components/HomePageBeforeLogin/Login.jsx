@@ -1,8 +1,38 @@
 import { FaPhone, FaLock } from "react-icons/fa6";
 import { Link } from "react-router";
 import TopBar from "../../Shared/TopBar";
+import axios from "axios";
 
 const Login = () => {
+  const handleLogin = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = {
+      email: formData.get("email"),
+      password: formData.get("password"),
+    };
+
+    try {
+      const response = await axios.post(
+        "https://www.happybanking.org/login",
+        data
+      );
+
+      // Assuming the server returns a JWT token
+      const token = response.data.token;
+
+      // Save the token (usually in localStorage)
+      localStorage.setItem("authToken", token);
+
+      alert("Login Successful!");
+      console.log("Login Response:", response.data);
+    } catch (error) {
+      console.error("Login Error:", error.response?.data || error.message);
+      alert("Login failed. Please check your credentials.");
+    }
+  };
+
   return (
     <>
       <div className="mt-1">
@@ -13,7 +43,7 @@ const Login = () => {
           <h2 className="text-center text-2xl font-bold text-[#F7961D]">
             Login
           </h2>
-          <form>
+          <form onSubmit={handleLogin}>
             <div className="mb-4">
               <label
                 htmlFor="mobile"

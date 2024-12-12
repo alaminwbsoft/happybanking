@@ -310,11 +310,12 @@ import { FaChevronDown, FaChevronUp, FaWallet } from "react-icons/fa";
 import { IoFemale, IoMale } from "react-icons/io5";
 import { FaLock } from "react-icons/fa6";
 import { FaPhone, FaEnvelope, FaUser, FaBriefcase } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TopBar from "../../Shared/TopBar";
 import axios from "axios";
 
 const Register = () => {
+  const navigate = useNavigate();
   // Gender state
   const [selectedGender, setSelectedGender] = useState(null);
   const handleSelectGender = (gender) => setSelectedGender(gender);
@@ -359,6 +360,7 @@ const Register = () => {
       );
       alert("Registration Successful!");
       console.log("Response Data:", response.data);
+      navigate("/login");
     } catch (error) {
       console.error("Error Response:", error.response?.data || error.message);
       alert("Registration failed. Please try again.");

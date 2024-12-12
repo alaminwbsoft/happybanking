@@ -5,7 +5,7 @@ import Login from "../Components/HomePageBeforeLogin/Login";
 import Blog from "../Components/HomePageBeforeLogin/Blog";
 import Contact from "../Components/HomePageBeforeLogin/Contact";
 import Register from "../Components/HomePageBeforeLogin/Register";
-import MFS from "../Components/PagesAfterlogin/MFS"
+import MFS from "../Components/PagesAfterlogin/MFS";
 import Card from "../Components/PagesAfterlogin/Card";
 import Bank from "../Components/PagesAfterlogin/Bank";
 import Profile from "../Components/PagesAfterlogin/Profile";
@@ -15,9 +15,7 @@ import About from "../Components/PagesAfterlogin/About";
 import PocketToBank from "../Components/PagesAfterlogin/PocketToBank";
 import HomeAfrerLogin from "../Components/PagesAfterlogin/HomeAfrerLogin";
 
-
 const Router = createBrowserRouter([
-  
   {
     path: "/",
     element: <LayOut />,
@@ -28,63 +26,59 @@ const Router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/home",
-        element: <HomeAfrerLogin/>
+        path: "/dashboard",
+        element: <HomeAfrerLogin />,
       },
       {
         path: "/login",
-        element: <Login/>,
+        element: <Login />,
       },
       {
         path: "/register",
-        element: <Register/>
+        element: <Register />,
       },
       {
         path: "/blog",
-        element: <Blog/>,
+        element: <Blog />,
       },
       {
         path: "/contact",
-        element: <Contact/>
+        element: <Contact />,
       },
       {
         path: "/mfs",
-        element: <MFS/>,
+        element: <MFS />,
       },
       {
         path: "/card",
-        element: <Card/>,
+        element: <Card />,
       },
       {
         path: "/bank",
-        element: <Bank/>,
+        element: <Bank />,
       },
       {
         path: "/profile",
-        element: <Profile/>,
+        element: <Profile />,
       },
       {
         path: "/transaction",
-        element: <Transaction/>,
+        element: <Transaction />,
       },
       {
         path: "/mfsToMfsPayment",
-        element: <MFSToMFSPayment/>,
+        element: <MFSToMFSPayment />,
       },
       {
         path: "/about",
-        element: <About/>,
+        element: <About />,
       },
       {
         path: "/pocketToBank",
-        element: <PocketToBank/>
+        element: <PocketToBank />,
       },
-     
-     
-    
     ],
   },
- 
 ]);
 
 export default Router;
