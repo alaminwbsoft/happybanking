@@ -335,6 +335,10 @@ const Register = () => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
+    // Logging FormData to console
+    for (let [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
     const data = {
       name: formData.get("name"),
       mobile: formData.get("mobile"),
@@ -347,17 +351,16 @@ const Register = () => {
       address: formData.get("address"),
       image: null, // Update with logic for image upload if needed
     };
-
+    console.log("Final Data Object:", data);
     try {
-      const response = await axios.post("/register", data);
-      alert("Registration Successful!");
-      console.log(data);
-      // Redirect or additional logic
-    } catch (error) {
-      console.error(
-        "Registration failed:",
-        error.response?.data || error.message
+      const response = await axios.post(
+        "https://www.happybanking.org/register",
+        data
       );
+      alert("Registration Successful!");
+      console.log("Response Data:", response.data);
+    } catch (error) {
+      console.error("Error Response:", error.response?.data || error.message);
       alert("Registration failed. Please try again.");
     }
   };
