@@ -12,6 +12,7 @@ const Login = () => {
       email: formData.get("email"),
       password: formData.get("password"),
     };
+    console.log(data)
 
     try {
       const response = await axios.post(

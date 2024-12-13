@@ -347,7 +347,7 @@ const Register = () => {
       password: formData.get("password"),
       password_confirmation: formData.get("confirm-password"),
       gender: selectedGender,
-      profession_id: formData.get("profession"),
+      profession_id: 1,
       wallet: balance,
       address: formData.get("address"),
       image: null, // Update with logic for image upload if needed
@@ -355,12 +355,17 @@ const Register = () => {
     console.log("Final Data Object:", data);
     try {
       const response = await axios.post(
-        "https://www.happybanking.org/register",
+        "https://www.happybanking.org/api/register",
         data
       );
-      alert("Registration Successful!");
-      console.log("Response Data:", response.data);
-      navigate("/login");
+      console.log("Response Data:", response);
+      if (response.status_code === 201) {
+        alert("Form submitted successfully!");
+        console.log("Response Data:", response.data);
+    } 
+
+      
+      // navigate("/login");
     } catch (error) {
       console.error("Error Response:", error.response?.data || error.message);
       alert("Registration failed. Please try again.");
