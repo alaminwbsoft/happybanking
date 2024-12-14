@@ -360,12 +360,13 @@ const Register = () => {
       );
       console.log("Response Data:", response);
       if (response.status_code === 201) {
+        console.log("Code block executed");
+
         alert("Form submitted successfully!");
         console.log("Response Data:", response.data);
-    } 
+      }
 
-      
-      // navigate("/login");
+      navigate("/login");
     } catch (error) {
       console.error("Error Response:", error.response?.data || error.message);
       alert("Registration failed. Please try again.");
