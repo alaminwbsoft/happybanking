@@ -9,14 +9,14 @@ const Login = () => {
 
     const formData = new FormData(event.target);
     const data = {
-      email: formData.get("email"),
+      mobile: formData.get("mobile"),
       password: formData.get("password"),
     };
-    console.log(data)
+    console.log(data);
 
     try {
       const response = await axios.post(
-        "https://www.happybanking.org/login",
+        "https://www.happybanking.org/api/login",
         data
       );
 
@@ -54,6 +54,7 @@ const Login = () => {
                 <input
                   type="text"
                   id="mobile"
+                  name="mobile"
                   className="shadow appearance-none border rounded w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Mobile"
                 />
@@ -71,6 +72,7 @@ const Login = () => {
                 <input
                   type="password"
                   id="password"
+                  name="password"
                   className="shadow appearance-none border rounded w-full py-2 pl-10 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Password"
                 />
