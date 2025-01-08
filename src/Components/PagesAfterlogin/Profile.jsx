@@ -1,22 +1,35 @@
+
+
+
 import { FaChevronRight } from "react-icons/fa";
-
 import { useNavigate } from "react-router-dom";
-
 
 const Profile = () => {
     const navigate = useNavigate();
-    const handleMFS = ()=>{
-        navigate('/mfs')
-    }
-    const handleAccount = ()=>{
-        navigate('/bank')
-    }
-    const handleCredit = ()=>{
-        navigate('/card')
-    }
+
+    const handleMFS = () => {
+        navigate('/mfs');
+    };
+
+    const handleAccount = () => {
+        navigate('/bank');
+    };
+
+    const handleCredit = () => {
+        navigate('/card');
+    };
+
+    const handleLogout = () => {
+        // Clear the authentication token and any user data
+        localStorage.removeItem("authToken");
+
+        // Redirect to the login page
+        navigate('/');
+        alert("You have been logged out successfully.");
+    };
+
     return (
         <div>
-          
             <div className="flex gap-4 p-2 mx-3 my-4 bg-white border rounded shadow-lg">
                 <div className="w-[32%] border border-blue-500 rounded">
                     <img className="rounded" src="https://happybanking.org/frontend/images/user.jpg" alt="" />
@@ -71,7 +84,7 @@ const Profile = () => {
                     <FaChevronRight />
                 </div>
                 <hr className=" border-[#dee2e6] mx-2 my-2" />
-                <div className="flex items-center justify-between text-[#dd3f45] cursor-pointer">
+                <div onClick={handleLogout} className="flex items-center justify-between text-[#dd3f45] cursor-pointer">
                     <h2 className="text-xl font-medium"> Logout</h2>
                     <FaChevronRight />
                 </div>

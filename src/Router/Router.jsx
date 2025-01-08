@@ -14,6 +14,9 @@ import MFSToMFSPayment from "../Components/PagesAfterlogin/MFSToMFSPayment";
 import About from "../Components/PagesAfterlogin/About";
 import PocketToBank from "../Components/PagesAfterlogin/PocketToBank";
 import HomeAfrerLogin from "../Components/PagesAfterlogin/HomeAfrerLogin";
+import NavMenuAfterLogin from "../Shared/NavMenuAfterLogin";
+import NavMenuBeforeLogin from "../Shared/NavMenuBeforeLogin";
+import Logout from "../Components/PagesAfterlogin/Logout";
 
 const Router = createBrowserRouter([
   {
@@ -30,8 +33,21 @@ const Router = createBrowserRouter([
         element: <HomeAfrerLogin />,
       },
       {
+        path: "/dashboards",
+        element: <NavMenuAfterLogin/>
+      },
+      {
+        path: "/",
+        element: <NavMenuBeforeLogin/>,
+      },
+
+      {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/",
+        element: <Logout/>
       },
       {
         path: "/register",
